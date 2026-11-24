@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Flip 7</title>
+</head>
+
+<body>
+    <!-- Ecran Accueil  -->
+    <div id="screen-home" class="screen">
+        <h1 id="flipLogo">Flip 7</h1>
+        <button id="btn-play">Jouer</button>
+        <button id="btn-stats">Statistiques</button>
+    </div>
+
+    <!-- Ecran Configuration  -->
+    <div id="screen-setup" class="screen hidden">
+        <h2 id="conf-part">Configuration de la partie</h2>
+        <div id="bloc-player">
+            <div id="players-list"></div>
+        </div>
+        <div id="add-player-form">
+            <input type="text" id="players-name" placeholder="Nom du Joueur">
+            <select id="player-type">
+                <option value="human">Joueur</option>
+                <option value="easy">AI Facile</option>
+                <option value="hard">AI Difficile</option>
+            </select>
+            <button id="btn-add-player">Ajouter un Joueur/AI</button>
+        </div>
+        <button id="btn-start-game">Lancer la partie</button>
+        <button id="btn-back-home">Retour</button>
+    </div>
+
+    <!-- Ecran Jeu  -->
+    <div id="screen-game" class="screen hidden">
+        <h2 id="conf-part">Partie de Flip 7</h2>
+        <p id="current-round-info"></p>
+        <p id="current-player-info"></p>
+
+        <div id="players-zone"></div>
+
+        <div id="bloc-jeu">
+            <button id="btn-stop">Stop</button>
+            <button id="btn-draw">Piocher</button>
+            <button id="btn-quit-game">Quitter la partie</button>
+        </div>
+    </div>
+
+    <!-- Overlay de choix d'un joueur  -->
+    <div id="overlay-target" class="hidden">
+        <div id="popup-target">
+            <h3 id="popup-target-title">Choisir une cible</h3>
+            <div id="popup-target-list"></div>
+        </div>
+    </div>
+
+    <!-- Overlay d'un message  -->
+    <div id="overlay" class="hidden">
+        <div id="overlay-box">
+            <div id="overlay-title"></div>
+            <button id="overlay-btn">OK</button>
+        </div>
+    </div>
+
+
+
+    <!-- Ecran Statistique  -->
+    <div id="screen-stats" class="screen hidden">
+        <h2 id="conf-part">Statistiques</h2>
+        <div id="stats-content">
+            <h3 id="Ts">Table des Statistiques</h3>
+        </div>
+        <button id="btn-back-home-stats">Retour</button>
+    </div>
+
+    <!-- Script -->
+    <script src="js/classes/Card.js"></script>
+    <script src="js/classes/Deck.js"></script>
+    <script src="js/classes/Player.js"></script>
+    <script src="js/classes/AIPlayerEasy.js"></script>
+    <script src="js/classes/AIPlayerHard.js"></script>
+    <script src="js/classes/Game.js"></script>
+    <script src="js/ui/UIManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

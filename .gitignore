@@ -1,0 +1,11 @@
+# Identifiants de la base de données (voir php/config.example.php)
+php/config.php
+.env
+
+# Visuels officiels du jeu (protégés)
+images/
+
+# Fichiers système et divers
+.DS_Store
+*.log
+node_modules/
